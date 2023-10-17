@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/main_fragment">
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="edu.iu.alex.midtermapp.MainFragment"
+        android:label="main_fragment"
+        app:layout="@layout/main_fragment">
+
+        <action
+            android:id="@+id/mainFragment_to_gameFragment"
+            app:destination="@+id/game_fragment"/>
+
+        <action
+            android:id="@+id/mainFragment_to_highScoreFragment"
+            app:destination="@+id/highscore_fragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/game_fragment"
+        android:name="edu.iu.alex.midtermapp.GameFragment"
+        android:label="game_fragment"
+        app:layout="@layout/game_fragment">
+
+        <action
+            android:id="@+id/gameFragment_to_mainFragment"
+            app:destination="@+id/main_fragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/highscore_fragment"
+        android:name="edu.iu.alex.midtermapp.HighScoreFragment"
+        android:label="highscore_fragment"
+        app:layout="@layout/highscore_fragment">
+
+    </fragment>
+
+
+</navigation>
