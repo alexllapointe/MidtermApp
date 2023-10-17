@@ -57,6 +57,13 @@ class HighScoreFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
 
+
+        /**
+         * If there are no entries to the recycler view, the empty textview will show.
+         *
+         *
+         */
+
         viewModel.getAllScores(requireContext()).observe(viewLifecycleOwner) { scores ->
             adapter.setScores(scores)
 
