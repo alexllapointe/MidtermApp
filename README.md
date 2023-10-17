@@ -18,7 +18,7 @@ The following **extensions** are implemented:
 
 ## Video Walkthrough
 
-![midtermpreview.gif]
+![](midtermpreview.gif)
 
 ## Notes
 
