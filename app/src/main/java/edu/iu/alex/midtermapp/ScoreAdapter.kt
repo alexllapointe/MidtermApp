@@ -27,6 +27,15 @@ class ScoreAdapter(private val onDeleteClick: (Score) -> Unit) : RecyclerView.Ad
         holder.playerName.text = score.name
         holder.guesses.text = "${score.attempts} guesses"
 
+
+        holder.guesses.setOnClickListener {
+            if (holder.playerName.visibility == View.VISIBLE) {
+                holder.playerName.visibility = View.GONE
+            } else {
+                holder.playerName.visibility = View.VISIBLE
+            }
+        }
+
         /**
          * Keeps track of when delete is pressed for the delete dialog(called within ScoreAdapater).
          *
